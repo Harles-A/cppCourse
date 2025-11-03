@@ -1,19 +1,27 @@
-// Kirjoita funktio, joka ottaa parametrinaan osoittimen kokonaislukuun
-// ja moninkertaistaa arvon kahdella. Kirjoita testipääohjelma.
-
 #include <iostream>
 
 using namespace std;
 
-void tuplaa(int* luku) {
+// a)
 
-    *luku *= 2;
+int summaa(const int* a, const int* b) {
+    return *a + *b;
+}
+
+// b)
+
+int summaa(const int& a, const int& b) {
+    return a + b;
 }
 
 int main() {
-    int x = 20;
-    tuplaa(&x);
-    cout << x << endl;
+    int x = 10, y = 8;
+
+    int osoitintulos = summaa(&x, &y);
+    cout << "Osoitinversio: " << x << " + " << y << " = " << osoitintulos << endl;
+
+    int referenssitulos = summaa(x, y);
+    cout << "Referenssiversio: " << x << " + " << y << " = " << referenssitulos << endl;
 
     return 0;
 }

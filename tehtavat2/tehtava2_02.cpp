@@ -1,20 +1,29 @@
-// Luo liukulukumuuttuja (double) ja osoitin siihen. Muuta muuttujan arvoa osoittimen
-// avulla ja tulosta muuttujan arvo ennen ja jälkeen muutoksen.
-
 #include <iostream>
+#include <windows.h>
 
 using namespace std;
 
 int main() {
 
-    double x = 2.35;
-    double* y = &x;
+    SetConsoleOutputCP(CP_UTF8);
+    SetConsoleCP(CP_UTF8);
 
-    cout << *y << endl;
+    int x = 69;
+    int* y = &x;
 
-    *y += 5.5;
+    cout << "x:n osoite muistissa: " << &x << endl;
+    cout << "y:n osoite muistissa: " << &y << endl;
+    cout << "x:n arvo: " << x << endl;
+    cout << "*y:n arvo: " << *y << endl;
+    cout << endl;
 
-    cout << *y << endl;
+    cout << "Havainnollistava muistikuva:" << endl;
+    cout << endl;
+
+    cout << "+-----------------+       +------------------------+" << endl;
+    cout << "|     x = " << x << "      |<---- | y = &x osoittaa tähän |" << endl;
+    cout << "| Osoite: " << &x << " | | Osoite: " << &y << "    |" << endl;
+    cout << "+-----------------+       +------------------------+" << endl;
 
     return 0;
 }

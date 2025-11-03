@@ -1,17 +1,20 @@
-// Luo kokonaisluku (int) -muuttuja ja osoitin, joka osoittaa kyseiseen muuttujaan.
-// Tulosta muuttujan arvo sekä suoraan että osoittimen avulla.
-
-#include <iostream>
+# include <iostream>
+#include <windows.h>
 
 using namespace std;
 
 int main() {
 
-    int x = 5;
-    int* y = &x;
+    SetConsoleOutputCP(CP_UTF8);
+    SetConsoleCP(CP_UTF8);
 
-    cout << x << endl;
-    cout << *y;
+    cout << "Seuravat muutujat vievät muistista: " << endl;
+    cout << "int: " << sizeof(int) << " tavua" << endl;
+    cout << "unsigned int: " << sizeof(unsigned int) << " tavua" << endl;
+    cout << "float: " << sizeof(float) << " tavua" << endl;
+    cout << "double: " << sizeof(double) << " tavua" << endl;
+    cout << "char: " << sizeof(char) << " tavua" << endl;
+    cout << "bool: " << sizeof(bool) << " tavua" << endl;
 
     return 0;
 }

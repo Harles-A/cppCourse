@@ -1,13 +1,25 @@
-// Määrittele osoitin, joka alkaa osoittaa nullptr-arvoon. Tarkista ohjelmassa, onko
-// osoittimen arvo nullptr ennen kuin käytät sitä, ja tulosta viesti tilanteesta.
-
 #include <iostream>
-
 using namespace std;
 
-int main() {
+int laskee(const char* mjono) {
 
-    int* p = nullptr; // Same as 0 or NULL
+    int pituus = 0;
+
+    while (*mjono != '\0') {
+        pituus++;
+        mjono++;
+    }
+
+    return pituus;
+}
+
+int main() {
+    const char mjono[] = "Hellooooooo";
+
+    int pituus = laskee(mjono);
+
+    cout << "Merkkijono: " << mjono << endl;
+    cout << "Merkkijonon pituus on: " << pituus << endl;
 
     return 0;
 }

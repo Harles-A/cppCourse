@@ -1,20 +1,35 @@
-// Luo osoitin, joka osoittaa johonkin kokonaislukumuuttujaan. Luo sen jälkeen
-// toinen osoitin, joka osoittaa äskeiseen osoittimeen. Muuta sen jälkeen
-// em. kokonaisluvun arvoa jälkimmäisen osoittimen avulla. Vihje: **
-
 #include <iostream>
+#include <windows.h>
 
 using namespace std;
 
+void nollaa(int* taulukko, int n) {
+    for (int i = 0; i < n; i++) {
+        taulukko[i] = 0;
+    }
+}
+
 int main() {
 
-    int x = 50;
+    SetConsoleOutputCP(CP_UTF8);
+    SetConsoleCP(CP_UTF8);
 
-    int* y = &x; // y osottaa x:ään
-    int** z = &y; // z osoittaa y:hyn
+    int numbers[] = { 11, 12, 15, 20, 33, 68, 100 };
+    int size = sizeof(numbers) / sizeof(numbers[0]);
 
-    **z = 200;
+    cout << "Taulukko ennen: " << endl;
+    for (int i = 0; i < size; i++) {
+        cout << numbers[i] << " ";
+    }
+    cout << endl;
 
-    cout << x << endl;
+    nollaa(numbers, size);
 
+    cout << "Taulukko nollauksen jälkeen: " << endl;
+    for (int i = 0; i < size; i++) {
+        cout << numbers[i] << " ";
+    }
+    cout << endl;
+
+    return 0;
 }
