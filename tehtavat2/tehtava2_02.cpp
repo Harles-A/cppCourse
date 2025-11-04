@@ -14,7 +14,7 @@ int main() {
     cout << "x:n osoite muistissa: " << &x << endl;
     cout << "y:n osoite muistissa: " << &y << endl;
     cout << "x:n arvo: " << x << endl;
-    cout << "*y:n arvo: " << y << endl;
+    cout << "y:n arvo: " << y << endl;
     cout << endl;
 
     cout << "Havainnollistava muistikuva:" << endl;
