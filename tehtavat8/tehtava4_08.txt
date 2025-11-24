@@ -1,0 +1,2 @@
+Kun luokassa on virtuaalifunktio, luokka on abstrakti.
+Abstraktista luokasta ei voi luoda olioita.
