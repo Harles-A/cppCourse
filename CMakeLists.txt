@@ -52,3 +52,8 @@ add_executable(tehtava1_09 tehtavat9/tehtava1_09.cpp
         tehtavat9/tehtava1_09.h)
 add_executable(tehtava2_09 tehtavat9/tehtava2_09.cpp)
 add_executable(tehtava3_09 tehtavat9/tehtava3_09.cpp)
+add_executable(tehtava1_10 tehtavat10/tehtava1_10.cpp)
+add_executable(tehtava2_10 tehtavat10/tehtava2_10.cpp)
+add_executable(tehtava3_10 tehtavat10/tehtava3_10.cpp)
+add_executable(tehtava4_10 tehtavat10/tehtava4_10.cpp)
+add_executable(tehtava5_10 tehtavat10/tehtava5_10.cpp)
